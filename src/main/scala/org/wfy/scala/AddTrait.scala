@@ -50,7 +50,7 @@ trait File extends Data {
 
   override def insert(id: Int): Unit = {
     println("向文件")
-    super[Operate].insert(id) //调用insert方法，这里的super是在动态混入时，不一定是父类
+    super[Data].insert(id) //调用insert方法，这里的super是在动态混入时，不一定是父类
   }
 }
 
