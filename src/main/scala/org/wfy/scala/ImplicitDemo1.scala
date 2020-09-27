@@ -9,9 +9,7 @@ package org.wfy.scala
 object ImplicitDemo1 {
   def main(args: Array[String]): Unit = {
 
-    implicit def doubleToInt(d: Double): Int = {
-      d.toInt
-    }
+    implicit def doubleToInt(d: Double): Int = d.toInt
 
     val a: Int = 3.14
     println(a)
