@@ -85,11 +85,11 @@ class CCC{
 }
 
 //错误！原因是CCC不是Exception的子类
-class UnhappyException3 extends CCC with LoggedException{
-  override def getMessage: String = {
-    "Error!"
-  }
-}
+//class UnhappyException3 extends CCC with LoggedException{
+//  override def getMessage: String = {
+//    "Error!"
+//  }
+//}
 
 //Logger就是自身类型，等价于trait Logger extends Exception
 //要求混入该特质的类，也是Exception的子类
