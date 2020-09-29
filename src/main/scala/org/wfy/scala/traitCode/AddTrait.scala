@@ -1,4 +1,4 @@
-package org.wfy.scala
+package org.wfy.scala.traitCode
 
 /*
 * @Author wfy

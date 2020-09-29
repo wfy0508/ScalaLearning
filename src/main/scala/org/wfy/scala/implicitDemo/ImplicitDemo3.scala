@@ -1,4 +1,4 @@
-package org.wfy.scala
+package org.wfy.scala.implicitDemo
 
 /*
 * @Author wfy
