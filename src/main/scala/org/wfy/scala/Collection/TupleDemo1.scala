@@ -1,4 +1,4 @@
-package org.wfy.scala.Collection.TupleDemo
+package org.wfy.scala.Collection
 
 /*
 * @Author wfy
