@@ -1,4 +1,4 @@
-package AbstractClass
+package org.wfy.scala.AbstractClass
 
 /*
 * @Author wfy
