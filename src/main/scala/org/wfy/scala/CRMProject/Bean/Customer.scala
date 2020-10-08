@@ -6,6 +6,7 @@ package org.wfy.scala.CRMProject.Bean
 * org.wfy.scala.CRMProject
 */
 
+//客户信息
 class Customer {
   //属性
   var id: Int = _

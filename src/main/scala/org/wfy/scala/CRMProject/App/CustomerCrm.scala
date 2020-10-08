@@ -8,6 +8,7 @@ import org.wfy.scala.CRMProject.View.CustomerView
 * org.wfy.scala.CRMProject.App
 */
 
+//主程序
 object CustomerCrm {
   def main(args: Array[String]): Unit = {
     new CustomerView().mainMenu()

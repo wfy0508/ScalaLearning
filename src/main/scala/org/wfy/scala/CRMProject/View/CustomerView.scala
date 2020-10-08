@@ -1,7 +1,5 @@
 package org.wfy.scala.CRMProject.View
 
-import java.beans.Customizer
-
 import org.wfy.scala.CRMProject.Bean.Customer
 import org.wfy.scala.CRMProject.Service.CustomerService
 
@@ -13,6 +11,7 @@ import scala.io.StdIn
 * org.wfy.scala.CRMProject.View
 */
 
+//客户展示界面
 class CustomerView {
 
   //定义一个循环变量，控制是否退出while循环
@@ -33,9 +32,9 @@ class CustomerView {
       println("请选择（1-5）：")
       key = StdIn.readChar()
       key match {
-        case '1' => println("添 加 客 户")
-        case '2' => this.addCustomer()
-        case '3' => println("删 除 客 户")
+        case '1' => this.addCustomer()
+        case '2' => println("修 改 客 户")
+        case '3' => this.delCustomer()
         case '4' => this.showDetails()
         case '5' => this.loop = false
         case _ => this.loop = false
@@ -76,5 +75,26 @@ class CustomerView {
     customerService.add(customer)
     println("----------------添加客户完成----------------")
     println()
+  }
+
+  //删除客户
+  def delCustomer(): Unit = {
+    println()
+    println("-----------------删除客户-----------------")
+    println("请选择待删除的编号（1-5）：")
+    val id = StdIn.readInt()
+    if (id == -1) {
+      println("删除没有完成")
+      return
+    }
+    println("确认是否删除（Y/N）：")
+    val choice = StdIn.readChar().toLower
+    if (choice == 'y') {
+      if (customerService.delCustomer(id)) {
+        println("删除完成")
+        return
+      }
+    }
+    println("删除没有完成")
   }
 }
